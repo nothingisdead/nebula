@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/skip2/go-qrcode"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 )
 
 type printFlags struct {

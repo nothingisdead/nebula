@@ -4,9 +4,12 @@
 /nebula-arm6
 /nebula-darwin
 /nebula.exe
+/nebula-cert.exe
+/nebula.test
 /cert/*.crt
 /cert/*.key
 /coverage.out
 /cpu.pprof
 /build
 /*.tar.gz
+.DS_Store

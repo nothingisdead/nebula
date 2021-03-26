@@ -9,7 +9,7 @@ import (
 	"github.com/flynn/noise"
 	"github.com/golang/protobuf/proto"
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 	"golang.org/x/net/ipv4"
 )
 

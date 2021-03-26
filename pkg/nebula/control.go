@@ -8,7 +8,7 @@ import (
 	"syscall"
 
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 )
 
 // Every interaction here needs to take extra care to copy memory and not return or use arguments "as is" when touching

@@ -8,7 +8,7 @@ import (
 
 	"github.com/kardianos/service"
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula"
+	"github.com/slackhq/nebula/pkg/nebula"
 )
 
 var logger service.Logger

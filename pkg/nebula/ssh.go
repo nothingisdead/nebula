@@ -15,7 +15,7 @@ import (
 	"syscall"
 
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula/sshd"
+	"github.com/slackhq/nebula/pkg/sshd"
 )
 
 type sshListHostMapFlags struct {

@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 
 	"github.com/flynn/noise"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 )
 
 const ReplayWindow = 1024

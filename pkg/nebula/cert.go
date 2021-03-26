@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 )
 
 var trustedCAs *cert.NebulaCAPool

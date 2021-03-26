@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula/cert"
-	"github.com/slackhq/nebula/util"
+	"github.com/slackhq/nebula/pkg/cert"
+	"github.com/slackhq/nebula/pkg/util"
 	"github.com/stretchr/testify/assert"
 )
 

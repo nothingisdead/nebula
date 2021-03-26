@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula"
+	"github.com/slackhq/nebula/pkg/nebula"
 )
 
 // A version string that can be set with

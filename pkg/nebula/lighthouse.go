@@ -10,7 +10,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/rcrowley/go-metrics"
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 )
 
 var ErrHostNotKnown = errors.New("host not known")

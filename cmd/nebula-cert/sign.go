@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/skip2/go-qrcode"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 	"golang.org/x/crypto/curve25519"
 )
 

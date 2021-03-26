@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/slackhq/nebula/util"
+	"github.com/slackhq/nebula/pkg/util"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/curve25519"
 	"golang.org/x/crypto/ed25519"

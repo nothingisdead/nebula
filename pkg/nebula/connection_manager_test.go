@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/flynn/noise"
-	"github.com/slackhq/nebula/cert"
+	"github.com/slackhq/nebula/pkg/cert"
 	"github.com/stretchr/testify/assert"
 )
 

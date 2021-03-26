@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/slackhq/nebula/sshd"
+	"github.com/slackhq/nebula/pkg/sshd"
 	"gopkg.in/yaml.v2"
 )
 
