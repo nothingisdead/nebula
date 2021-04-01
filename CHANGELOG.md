@@ -7,10 +7,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `nebula-cert` `sign`, `print`, and `ca` now have the ability to export qr codes.
+
+- Experimental support for traffic using multiple CPU cores on Linux.
+  `routines` (which defaults to 1) will change how many routines are running for a
+  tun and udp pair. Work is spread across the routines by the kernel. 
+  
+- A process with `tun.disabled: true` can now respond to ICMP packets if the nebula
+  firewall allows for it.
+  
+- UDP socket stats will now be emitted when running on Linux. Among the stats are
+  queue memory use and packet drop counters to help tune your rx and tx buffers.
+  
+- Support for ipv6 on the overlay network (#6)
+
+- Prometheus stats will now report the current build version
+
 ### Changed
 
 - Updated the kardianos/service go library from 1.0.0 to 1.1.0, which
   now creates launchd plist to write stdout/stderr to files by default.
+
+- Improved memory reuse in the `ConnectionManager`
+
+- Changed release to compile with Go 1.16
+
+- Updated the README to reference all supported ciphers
+
+- Network changes, currently only on mobile devices, will trigger the other side of a
+  tunnel to perform hole punches. This helps facilitate keeping a tunnel alive when
+  a client roams.
+  
+- Handshakes have been refactored to make them more efficient and resilient to errors.
+
+- Lighthouses will generate far less garbage than before and are now more performant.
+
+### Fixed
+
+- Lost packet stats won't report handshake packets as missed anymore
+
+- Certain certificates will no longer cause a panic during unmarshal (#332)
+
+- `UnmarshalNebulaCertificateFromPEM` will do a banner check now to fail with a
+  better error message in the event we are unmarshaling something other than a
+  nebula cert.
+  
+- Many rare data races have been fixed (#147, #226, #283, #316)
+
+- Disabled the ability to handshake with yourself
 
 ## [1.3.0] - 2020-09-22
 
