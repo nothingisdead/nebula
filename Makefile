@@ -27,6 +27,7 @@ ALL_LINUX = linux-amd64 \
 	linux-mips-softfloat
 
 ALL = $(ALL_LINUX) \
+	js-wasm \
 	darwin-amd64 \
 	darwin-arm64 \
 	freebsd-amd64 \
@@ -80,6 +81,9 @@ build/linux-mips-%: GOENV += GOMIPS=$(word 3, $(subst -, ,$*))
 # Build an extra small binary for mips-softfloat
 build/linux-mips-softfloat/%: LDFLAGS += -s -w
 
+# Build an extra small binary for WASM
+build/js-wasm/%: LDFLAGS += -s -w
+
 build/%/nebula: .FORCE
 	GOOS=$(firstword $(subst -, , $*)) \
 		GOARCH=$(word 2, $(subst -, ,$*)) $(GOENV) \
@@ -94,6 +98,9 @@ build/%/nebula.exe: build/%/nebula
 	mv $< $@
 
 build/%/nebula-cert.exe: build/%/nebula-cert
+	mv $< $@
+
+build/%/nebula-cert.wasm: build/%/nebula-cert
 	mv $< $@
 
 build/nebula-%.tar.gz: build/%/nebula build/%/nebula-cert
